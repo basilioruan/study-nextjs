@@ -36,9 +36,11 @@ export function Header() {
             </h1>
           </Link>
 
-          <Link href='/dashboard' className={styles.link}>
-            Meu Painel
-          </Link>
+          { session &&
+            <Link href='/dashboard' className={styles.link}>
+              Meu Painel
+            </Link>
+          }
         </nav>
 
         { getConditionalLoginButton() }
